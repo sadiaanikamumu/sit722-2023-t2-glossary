@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= subheading %></p>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Term</th>
+        <th>Description</th>
+        <th>References</th>
+      </tr>
+      <% item.forEach((items) => {%>   
+      <tr>
+        <td>
+          <%= items.ID %>
+
+        </td>
+        <td>
+          <%= items.Term %>
+        </td>
+        <td>
+          <%= items.Description %>
+        </td>
+        <td>
+          <%= items.References %>
+        </td>
+      </tr>
+    <% }); %>
+    </table>
+  </body>
+</html>
